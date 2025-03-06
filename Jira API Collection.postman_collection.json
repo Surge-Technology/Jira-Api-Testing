@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "ab6ed11d-d8e7-44fe-846c-8b46ea144509",
+		"name": "Jira API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32133289"
+	},
+	"item": [
+		{
+			"name": "create-jira",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiToken}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mani.ceg2019@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jira\": \"create\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/Create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-Jira",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiToken}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mani.ceg2019@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jira\": \"update\",\r\n    \"issueKey\": \"SCRUM-40\",\r\n    \"newSummary\": \"Java API\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/Update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Jira",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{apiToken}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mani.ceg2019@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \"jira\": \"delete\",\r\n  \"issueKey\": \"SCRUM-24\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/Delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"Delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
